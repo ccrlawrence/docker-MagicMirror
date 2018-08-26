@@ -9,6 +9,7 @@ RUN git clone --depth 1 -b master https://github.com/MichMich/MagicMirror.git .
 RUN cp -R modules /opt/default_modules
 RUN cp -R config /opt/default_config
 RUN npm install --unsafe-perm --silent
+RUN npm install --global speedtest-net
 
 COPY docker-entrypoint.sh /opt
 RUN apt-get update \
